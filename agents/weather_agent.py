@@ -28,7 +28,7 @@ async def weather_main(query):
         tools=tools,
         system_prompt=system_prompt,
         checkpointer=checkpointer,
-        response_format= ToolStrategy(TemperatureResponseModel)
+        response_format= TemperatureResponseModel
     )
 
     response = await agent.ainvoke(

@@ -3,8 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="langchain_env" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="558060a4-696f-4716-9535-f5ddd369f76e" />
-  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="langchain_env" project-jdk-type="Python SDK" />
 </project>
