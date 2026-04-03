@@ -1,8 +1,7 @@
 from langchain.agents import create_agent
 from langchain.tools import tool
 from agents.weather_agent import weather_main
-import asyncio
-from config.agents_config import AGENT_CONFIGS
+from tools.tools_middlewear import handle_tool_errors
 from models_config.get_model_object import get_openai_model
 
 def build_orchestrator_tools():
@@ -24,6 +23,7 @@ async def run_orchestrator(query:str):
     orchestrator = create_agent(
         model=get_openai_model(tier="low"),
         tools=tools,
+        middleware=[handle_tool_errors],
         system_prompt="""
         You are an orchestrator agent. Your job is to route the user's query to the appropriate agent tool.
         If the user's query is about weather, call the weather_agent tool with the query as an argument.
