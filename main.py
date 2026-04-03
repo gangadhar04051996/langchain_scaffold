@@ -6,7 +6,7 @@ load_dotenv()
 
 async def main():
     queries = [
-        "What is the weather in Mesa Arizona?"
+        "What is the weather in Arlington Arizona?"
     ]
 
     for query in queries:
