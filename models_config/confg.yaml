@@ -92,6 +92,35 @@ models:
     model: gemma-2b-it
     tier: nano
 
+  ollama_cloud_high:
+    provider: ollama
+    model: qwen3.5:397b-cloud
+    tier: high
+
+  ollama_medium:
+    provider: ollama
+    model: glm-5.1:cloud
+    tier: medium
+
+  ollama_low:
+    provider: ollama
+    model: ministral-3:3b-cloud
+    tier: low
+
+  ollama_cloud_medium:
+    provider: ollama
+    model: glm-5.1:cloud
+    tier: cloud_medium
+
+  ollama_local_medium:
+    provider: ollama
+    model: gemma4:latest
+    tier: local
+
+  ollama_local_low:
+    provider: ollama
+    model: qwen3.5:9b
+    tier: local-low
 
 # ========================
 # ROUTING CONFIG (DEFAULT)

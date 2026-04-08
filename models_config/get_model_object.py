@@ -1,6 +1,7 @@
 import yaml
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_anthropic.chat_models import ChatAnthropic
+from langchain_ollama.chat_models import ChatOllama
 
 with open("models_config/confg.yaml") as f:
     config = yaml.safe_load(f)
@@ -13,3 +14,7 @@ def get_openai_model(tier="low"):
 def get_anthropic_model(tier="low"):
     model = config["models"][f"claude_{tier}"]['model']
     return ChatAnthropic(model_name=model, temperature=0)
+
+def get_ollama_model(tier="low"):
+    model = config["models"][f"ollama_{tier}"]['model']
+    return ChatOllama(model=model, temperature=0)
